@@ -5,7 +5,6 @@ Paste-ready HTML for Spark Email, Gmail, Outlook, Apple Mail, iOS Mail, and majo
 
 Edit Guide:
 Name = Jimmy Motsei
-Title = Chief Rainmaker
 Company = Maru Online (Pty) Ltd
 Email = hello@maruonline.com
 Phone = +27 83 393 4864
@@ -17,8 +16,6 @@ X (Twitter) = https://x.com/maru_africa
 Facebook = https://facebook.com/maruonlin
 Instagram = https://instagram.com/maru_automations
 WhatsApp = https://wa.me/27833934864
-Location = WeWork Rosebank, 173 Oxford Road, Johannesburg, 2196, South Africa
-
 Image hosting: update the absolute HTTPS paths below once assets/signature/* are uploaded.
 -->
 <!DOCTYPE html>
@@ -28,6 +25,8 @@ Image hosting: update the absolute HTTPS paths below once assets/signature/* are
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="x-apple-disable-message-reformatting" />
     <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
     <title>Maru Online Email Signature</title>
     <style type="text/css">
       body {
@@ -59,6 +58,56 @@ Image hosting: update the absolute HTTPS paths below once assets/signature/* are
         .social-group {
           padding-top: 12px !important;
           padding-bottom: 12px !important;
+        }
+        .sig-logo {
+          width: 120px !important;
+          height: auto !important;
+          margin: 0 auto 12px !important;
+        }
+        .stack-column {
+          padding-right: 0 !important;
+          padding-bottom: 8px !important;
+        }
+      }
+      :root {
+        color-scheme: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #111827 !important;
+          color: #f0f2f5 !important;
+        }
+        [data-sig="card"] {
+          background-color: #1F2937 !important;
+          border-color: #374151 !important;
+        }
+        [data-sig-el="name"] {
+          color: #E5E7EB !important;
+        }
+        [data-sig-el="company"] {
+          color: #9CA3AF !important;
+        }
+        .sig-label {
+          color: #9CA3AF !important;
+        }
+        [data-sig-el="compliance"] {
+          background-color: #111827 !important;
+          color: #9CA3AF !important;
+        }
+        td[style*="border-bottom"] {
+          border-bottom-color: #374151 !important;
+        }
+        [data-sig-el="cta"] {
+          background-color: #3DB8C6 !important;
+          color: #ffffff !important;
+        }
+        .sig-logo {
+          background-color: rgba(255, 255, 255, 0.12) !important;
+          padding: 8px !important;
+          border-radius: 16px !important;
+        }
+        [data-sig-el="social"] img {
+          filter: brightness(0) invert(1) !important;
         }
       }
     </style>
@@ -119,30 +168,31 @@ Image hosting: update the absolute HTTPS paths below once assets/signature/* are
               <td
                 class="stack-column"
                 style="
-                  vertical-align: top;
+                  vertical-align: middle;
                   padding-right: 24px;
                   text-align: left;
                 "
               >
-                <img width="160" height="auto" style="display:block;border:0;outline:none;text-decoration:none;height:auto;width:160px;max-width:100%;"
-                  src="https://maruonline.com/img/optimized/new_maru_logo_neutral.png"
-                 
-                 
-                  alt="Maru Online logo"
-                  data-sig-el="logo"
-                  class="y-6"
-                  style="
-                    display: block;
-                    width: 163px;
-                    height: 163px;
-                    border-radius: 16px;
-                    border: 0;
-                    outline: none;
-                    text-decoration: none;
-                  "
-                />
+                <a href="https://maruonline.com" target="_blank" style="display:block;text-decoration:none;border:0;outline:none;">
+                  <img width="160" height="160"
+                    src="new_maru_logo_neutral.png"
+                    alt="Maru Online logo"
+                    data-sig-el="logo"
+                    class="y-6 sig-logo"
+                    style="
+                      display: block;
+                      width: 160px;
+                      max-width: 100%;
+                      height: auto;
+                      border-radius: 16px;
+                      border: 0;
+                      outline: none;
+                      text-decoration: none;
+                    "
+                  />
+                </a>
               </td>
-              <td class="stack-column" style="vertical-align: top">
+              <td class="stack-column" style="vertical-align: middle">
                 <table
                   role="presentation"
                   cellspacing="0"
@@ -151,7 +201,7 @@ Image hosting: update the absolute HTTPS paths below once assets/signature/* are
                   width="100%"
                 >
                   <tr>
-                    <td style="padding: 0 0 3px">
+                    <td style="padding: 0 0 6px">
                       <span
                         data-sig-el="name"
                         class="y--6"
@@ -167,7 +217,7 @@ Image hosting: update the absolute HTTPS paths below once assets/signature/* are
                     </td>
                   </tr>
                   <tr>
-                    <td style="padding: 0 0 3px">
+                    <td style="padding: 0 0 4px">
                       <span
                         data-sig-el="title"
                         class="y-2"
@@ -176,9 +226,9 @@ Image hosting: update the absolute HTTPS paths below once assets/signature/* are
                           font-size: 16px;
                           font-weight: 500;
                           line-height: 1.3;
-                          color: #0ea5b6;
+                          color: #3DB8C6;
                         "
-                        >Chief Rainmaker</span
+                        >Founder &amp; CEO</span
                       >
                     </td>
                   </tr>
@@ -209,7 +259,7 @@ Image hosting: update the absolute HTTPS paths below once assets/signature/* are
                     >
                       <div data-sig-area="right">
                         <div data-sig-info-list>
-                          <div data-sig-row data-key="phone">
+                          <div data-sig-row data-key="phone" style="padding-bottom: 6px">
                             <span
                               data-sig-el="phone-label"
                               class="sig-label y-4"
@@ -221,12 +271,12 @@ Image hosting: update the absolute HTTPS paths below once assets/signature/* are
                                 href="tel:+27833934864"
                                 data-sig-el="phone"
                                 class="y-8"
-                                style="color: #0ea5b6; text-decoration: none"
+                                style="color: #3DB8C6; text-decoration: none"
                                 >+27 83 393 4864</a
                               >
                             </span>
                           </div>
-                          <div data-sig-row data-key="email">
+                          <div data-sig-row data-key="email" style="padding-bottom: 6px">
                             <span
                               data-sig-el="email-label"
                               class="sig-label y--4"
@@ -238,26 +288,10 @@ Image hosting: update the absolute HTTPS paths below once assets/signature/* are
                                 href="mailto:hello@maruonline.com"
                                 data-sig-el="email"
                                 class="y-10"
-                                style="color: #0ea5b6; text-decoration: none"
+                                style="color: #3DB8C6; text-decoration: none"
                                 >hello@maruonline.com</a
                               >
                             </span>
-                          </div>
-                          <div data-sig-row data-key="location">
-                            <span
-                              data-sig-el="location-label"
-                              class="sig-label y-2"
-                              style="font-weight: 600; color: #6b7280"
-                              >Location</span
-                            >
-                            <span
-                              class="sig-value sig-value--location y--8"
-                              data-sig-el="location"
-                              title="We Work Rosebank · 173 Oxford Road · Johannesburg 2196"
-                              style="color: #1f2937"
-                              >We Work Rosebank · 173&nbsp;Oxford&nbsp;Road ·
-                              Johannesburg 2196</span
-                            >
                           </div>
                         </div>
                       </div>
@@ -312,7 +346,7 @@ Image hosting: update the absolute HTTPS paths below once assets/signature/* are
                   class="cta-button y--2"
                   data-sig-el="cta"
                   style="
-                    background-color: #0b7686;
+                    background-color: #3DB8C6;
                     border-radius: 12px;
                     color: #ffffff;
                     display: inline-block;
@@ -470,7 +504,7 @@ Image hosting: update the absolute HTTPS paths below once assets/signature/* are
                   data-sig-el="site"
                   class="y--4"
                   style="
-                    color: #0ea5b6;
+                    color: #3DB8C6;
                     text-decoration: none;
                     font-weight: 600;
                   "

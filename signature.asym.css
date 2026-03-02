@@ -84,11 +84,11 @@
 
 /* Specific element offsets for visual rhythm */
 [data-sig="card"][data-asym="on"] [data-sig-el="logo"] {
-  transform: translateY(6px);
+  transform: translateY(0);
 }
 
 [data-sig="card"][data-asym="on"] [data-sig-el="name"] {
-  transform: translateY(-6px);
+  transform: translateY(0);
 }
 
 [data-sig="card"][data-asym="on"] [data-sig-el="title"] {
@@ -113,16 +113,6 @@
 
 [data-sig="card"][data-asym="on"] [data-sig-el="email"] {
   transform: translateY(10px);
-}
-
-[data-sig="card"][data-asym="on"] [data-sig-el="location-label"] {
-  transform: translateY(2px);
-}
-
-[data-sig="card"][data-asym="on"] [data-sig-el="location"] {
-  transform: translateY(-8px);
-  display: inline-block;
-  white-space: nowrap;
 }
 
 [data-sig="card"][data-asym="on"] [data-sig-el="cta"] {
